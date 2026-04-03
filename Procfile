@@ -1,1 +1,1 @@
-web: gunicorn blogproject.wsgi
+web: python manage.py migrate && python manage.py collectstatic --noinput && gunicorn blogproject.wsgi:application --bind 0.0.0.0:$PORT
