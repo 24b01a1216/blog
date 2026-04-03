@@ -17,9 +17,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from blog import views   # replace with your app name
+from blogapp import views   # replace with your app name
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('blog.urls')),
+    path('', include('blogapp.urls')),
       path('', views.home),   # 👈 this line is important
 ]
