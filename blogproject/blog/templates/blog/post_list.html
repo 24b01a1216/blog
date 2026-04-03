@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Posts</title>
+</head>
+<body>
+    <h1>Blog Posts</h1>
+
+    {% for post in posts %}
+        <h2>
+            <a href="/post/{{ post.id }}/">{{ post.title }}</a>
+        </h2>
+        <p>By {{ post.author }} on {{ post.created_at }}</p>
+        <hr>
+    {% endfor %}
+</body>
+</html>
